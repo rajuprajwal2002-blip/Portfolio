@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajwal Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0f14;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    background: #0b0f14;
+}
+
+nav h2 {
+    color: #00ff9d;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #00ff9d;
+}
+
+.btn {
+    background: #00ff9d;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+}
+
+.hero-text span {
+    color: #00ff9d;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #aaa;
+}
+
+.hero img {
+    width: 280px;
+    border-radius: 20px;
+}
+
+/* Sections */
+section {
+    padding: 60px 50px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #111;
+    border-radius: 10px;
+}
+
+/* About */
+.about {
+    display: flex;
+    gap: 40px;
+}
+
+.about img {
+    width: 280px;
+    border-radius: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+/* Projects */
+.projects h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+/* Button */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #00ff9d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Prajwal</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="btn">Download CV</div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>I'M <span>PRAJWAL R</span></h1>
+        <h1>AI & ML DEVELOPER</h1>
+        <p>
+        MCA student passionate about Artificial Intelligence, Machine Learning,
+        and Data Analysis. I build real-world intelligent systems and dashboards.
+        </p>
+        <button onclick="scrollToSection('contact')">Contact Me</button>
+    </div>
+
+    <img src="your-edited-photo.png" alt="My Photo">
+</section>
+
+<!-- Stats -->
+<section class="stats">
+    <div>✔ 4+ Projects Completed</div>
+    <div>✔ Machine Learning Developer</div>
+    <div>✔ Streamlit Web Apps</div>
+    <div>✔ Data Analysis Expert</div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+    <img src="your-photo.jpg">
+
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+        Hi, I am Prajwal R, currently pursuing MCA at Sapthagiri College.
+        I have a strong interest in Artificial Intelligence, Machine Learning,
+        and Data Analysis.
+        </p>
+
+        <p>
+        I have worked on several real-time projects including Loan Prediction System,
+        Productivity Tracker, and AI-based applications. I enjoy building user-friendly
+        web apps using Streamlit and creating dashboards using Power BI.
+        </p>
+
+        <p>
+        My goal is to become a skilled AI Engineer and develop impactful solutions
+        for real-world problems.
+        </p>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>🤖 Loan Analysis & Prediction ⭐</h3>
+        <p>
+        Developed a machine learning model using Logistic Regression and Random Forest
+        to predict loan approval. Integrated with a Streamlit app for real-time predictions.
+        </p>
+        <button onclick="openApp('#')">Live Demo</button>
+    </div>
+
+    <div class="card">
+        <h3>📊 Study Hours & Productivity Tracker</h3>
+        <p>
+        Tracks daily study time and provides insights using data visualization to improve productivity.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🎓 Student Discipline System</h3>
+        <p>
+        A system to monitor and manage student behavior and discipline records efficiently.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🩸 Blood Bank Management System</h3>
+        <p>
+        Manages blood donor information and inventory for hospitals and emergency needs.
+        </p>
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: rajuprajwal2002@email.com</p>
+    <p>GitHub: https://github.com/rajuprajwal2002-blip</p>
+    <p>LinkedIn: http://linkedin.com/in/prajwalr01</p>
+
+</section>
+
+<script>
+function openApp(link){
+    window.open(link, "_blank");
+}
+
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView();
+}
+</script>
+
+</body>
+</html>
